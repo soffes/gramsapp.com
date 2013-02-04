@@ -1,0 +1,16 @@
+@import "bourbon";
+
+@mixin experimental($property, $value) {
+  -webkit-#{$property}: $value;
+   -khtml-#{$property}: $value;
+     -moz-#{$property}: $value;
+      -ms-#{$property}: $value;
+       -o-#{$property}: $value;
+          #{$property}: $value;
+}
+
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}

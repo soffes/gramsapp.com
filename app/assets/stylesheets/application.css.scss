@@ -1,0 +1,127 @@
+@import "globals/*";
+@import "components/*";
+@import "grater";
+
+html {
+  @include experimental(font-smoothing, antialiased);
+  text-rendering: optimizelegibility;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  color: #525457;
+  background: #efeeee;
+}
+
+a {
+  color: #e57066;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+header, section, footer {
+  text-align: center;
+}
+
+header {
+  height: 306px;
+  font-family: 'Lato', sans-serif;
+  background-image: asset-url('photo02.jpg', image), asset-url('photo01.jpg', image), asset-url('photo03.jpg', image);
+  background-position: center, left, right;
+  background-repeat: no-repeat;
+  background-size: 306px 306px, 306px 306px, 306px 306px;
+
+  div {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 183px;
+    padding-top: 123px;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+  word-spacing: -0.25em;
+  color: #fff;
+  border: 2px solid;
+  width: 207px;
+  height: 40px;
+  line-height: 40px;
+  padding: 10px;
+  font-size: 26px;
+  margin: 0 auto 0.5em;
+}
+
+h2 {
+  color: #fff;
+  font-size: 12px;
+}
+
+section {
+  padding: 4em 0;
+  background: #fff;
+}
+
+div.headshot {
+  width: 95px;
+  height: 95px;
+  background-size: 95px 95px;
+  margin: 0 auto 1em;
+
+  a {
+    @include hide-text;
+    @include clearfix;
+    display: none;
+    width: 47px;
+    height: 95px;
+    background-color: rgba(78, 159, 195, .7);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 22px 18px;
+
+    &:hover {
+      background-color: rgba(63, 115, 157, 0.7);
+    }
+
+    &.twitter {
+      float: left;
+      border-radius: 95px 0 0 95px;
+      background-image: asset-url('twitter.svg', image);
+    }
+
+    &.instagram {
+      width: 48px;
+      float: right;
+      border-radius: 0 95px 95px 0;
+      background-image: asset-url('instagram.svg', image);
+    }
+  }
+
+  &.sam {
+    background-image: asset-url('sam.jpg', image);
+  }
+
+  &.oykun {
+    background-image: asset-url('oykun.jpg', image);
+  }
+
+  &:hover {
+    a {
+      display: block;
+    }
+  }
+}
+
+input[type=email] {
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+footer {
+  color: #717376;
+  padding: 3em 0;
+}
