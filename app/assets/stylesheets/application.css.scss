@@ -27,18 +27,37 @@ header, section, footer {
 }
 
 header {
+  background: #000;
   height: 306px;
   font-family: 'Lato', sans-serif;
   background-image: asset-url('photo02.jpg', image), asset-url('photo01.jpg', image), asset-url('photo03.jpg', image);
   background-position: center, left, right;
   background-repeat: no-repeat;
   background-size: 306px 306px, 306px 306px, 306px 306px;
+  position: relative;
 
   div {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 183px;
     padding-top: 123px;
+  }
+
+  label {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    bottom: 10px;
+    right: 10px;
+    font-size: 10px;
+
+    a {
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+
+      &:hover {
+        color: #fff;
+      }
+    }
   }
 }
 
@@ -57,7 +76,7 @@ h1 {
 
 h2 {
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 section {
@@ -115,6 +134,16 @@ div.headshot {
   }
 }
 
+@media #{$grater-small-media-query} {
+  section {
+    padding: 2em 0;
+  }
+
+  .grater > div:first-child {
+    margin-bottom: 4em;
+  }
+}
+
 input[type=email] {
   border: 0;
   border-radius: 5px;
@@ -124,4 +153,5 @@ input[type=email] {
 footer {
   color: #717376;
   padding: 3em 0;
+  line-height: 2em
 }
