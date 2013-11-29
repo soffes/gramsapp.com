@@ -1,13 +1,31 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
-gem 'puma'
+# Latest Ruby
+ruby '2.0.0'
 
-group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-  gem 'jquery-rails'
-  gem 'bourbon'
-  gem 'grater'
+# Web server
+gem 'unicorn'
+
+# Simple HTTP
+gem 'sinatra'
+
+# Faster ERB
+gem 'erubis'
+
+# Asset pipeline
+gem 'sprockets'
+gem 'sprockets-helpers'
+
+# Use the right host
+gem 'rack-canonical-host'
+
+# Stylesheet
+gem 'sass'
+gem 'sprockets-sass'
+gem 'grater'
+gem 'bourbon'
+
+group :development do
+  # Reloading in development
+  gem 'shotgun'
 end

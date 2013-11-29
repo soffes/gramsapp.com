@@ -91,7 +91,6 @@ div.headshot {
   margin: 0 auto 1em;
 
   a {
-    @include hide-text;
     @include clearfix;
     display: none;
     width: 47px;
@@ -100,6 +99,7 @@ div.headshot {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 22px 18px;
+    color: rgba(0, 0, 0, 0);
 
     &:hover {
       background-color: rgba(63, 115, 157, 0.7);
